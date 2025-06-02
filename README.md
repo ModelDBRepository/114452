@@ -1,10 +1,9 @@
-<html><pre>
 This is the readme for the model associated with the paper:
 
 Graupner M, Brunel N (2007) STDP in a bistable synapse model based on
-CaMKII and associated signaling pathways. PLoS Comput Biol 3:e221
+CaMKII and associated signaling pathways. *PLoS Comput Biol* 3:e221
 
-Abstract:
+## Abstract
 
 The calcium/calmodulin-dependent protein kinase II (CaMKII) plays a
 key role in the induction of long-term postsynaptic modifications
@@ -34,36 +33,40 @@ CaMKII protein network can account for both induction, through
 LTP/LTD-like transitions, and storage, due to its bistability, of
 synaptic changes.
 
-Usage notes:
+## Usage notes
 
 Please note that this (ode) file allows to compute the steady-states
-of the CaMKII phosphorylation level with respect to calicum. The
+of the CaMKII phosphorylation level with respect to calcium. The
 parameter used here allow to reproduce the data shown in Fig.3C by the
-blue line (p.2303) in the above mentioned paper.  
-The steady-state diagram consits of two separate branches which have 
-to be computed separately. This is the case since the initial point 
-(specified by 'init' in the .ode files) has to be a fixed point on 
+blue line (p.2303) in the above mentioned paper.
+
+The steady-state diagram consists of two separate branches which have
+to be computed separately. This is the case since the initial point
+(specified by 'init' in the .ode files) has to be a fixed point on
 the respective branch. Two files are provided to compute the upper
 (including the UP state) and the lower (including the DOWN state) branch.
-The computation starts at Ca_0 = 0.2 \mu M for the former and at 
-Ca_0 = 0.01 \mu M for the latter. 
+The computation starts at Ca_0 = 0.2 μM for the former and at
+Ca_0 = 0.01 μM for the latter.
 
-Note however that all the dynamic simulations were not done with xppaut. 
-The dynamics of the CaMKII-system has been implemented in a C++ code. 
+Note however that all the dynamic simulations were not done with xppaut.
+The dynamics of the CaMKII-system has been implemented in a C++ code.
 Please contact the authors for further informations.
 
-both files are set to run:
+Both files are set to run:
 1. start xppaut and load file
-$ xppaut 
-2. lauch auto
-click -> File -> AUTO
+   $ xppaut
+2. launch auto
+   click -> File -> AUTO
 3. run auto
-click -> Run -> Steady State 
+   click -> Run -> Steady State
 and you will get the fix-points of the system with the bistability
 
 (see ode file for more usage information).
 
-<img src="./camkII_steady-states.jpg" alt="CaMKIIsteady states">
+![CaMKII steady states](./camkII_steady-states.jpg)
 
 This model was submitted by Dr. Graupner.
-</pre></html>
+
+---
+
+2025-06-02: Standardized to Markdown.
